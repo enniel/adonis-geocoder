@@ -1,5 +1,7 @@
 # Adonis Geocoder
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/enniel/adonis-geocoder.svg?token=518001467f1c3713e52ba1cf47182306b9699790c60bf24c4f5d0fe5eb3903f5&ts=1498035605822)](https://greenkeeper.io/)
+
 ## Installation
 
 1. Add package:
