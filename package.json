@@ -1,0 +1,52 @@
+{
+  "name": "adonis-geocoder",
+  "version": "0.0.1",
+  "description": "The Adonis Geocoder.",
+  "main": "src/Geocoder",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "precommit": "lint-staged",
+    "prepush": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "git add"
+    ]
+  },
+  "author": "Evgeny Razumov (enniel)",
+  "license": "MIT",
+  "dependencies": {
+    "harmony-reflect": "^1.5.1",
+    "node-geocoder": "^3.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enniel/adonis-geocoder.git"
+  },
+  "keywords": [
+    "adonis",
+    "lucid",
+    "google",
+    "maps",
+    "geocoder"
+  ],
+  "bugs": {
+    "url": "https://github.com/enniel/adonis-geocoder/issues"
+  },
+  "homepage": "https://github.com/enniel/adonis-geocoder#readme",
+  "devDependencies": {
+    "husky": "^0.13.4",
+    "lint-staged": "^3.6.1",
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "global": [
+      "use"
+    ]
+  }
+}
