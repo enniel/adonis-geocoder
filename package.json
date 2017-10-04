@@ -1,6 +1,6 @@
 {
   "name": "adonis-geocoder",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "The Adonis Geocoder.",
   "main": "src/Geocoder.js",
   "directories": {
@@ -40,8 +40,11 @@
   },
   "homepage": "https://github.com/enniel/adonis-geocoder#readme",
   "devDependencies": {
+    "@adonisjs/fold": "^4.0.4",
+    "@adonisjs/framework": "^4.0.23",
     "husky": "^0.13.4",
     "lint-staged": "^3.6.1",
+    "lodash": "^4.17.4",
     "standard": "^10.0.2"
   },
   "standard": {

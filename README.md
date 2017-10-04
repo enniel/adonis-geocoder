@@ -25,31 +25,36 @@ const providers = [
 
 3. Config
 
-You can grab the sample configuration from [examples/geocoder.js](https://github.com/enniel/adonis-geocoder/blob/master/examples/geocoder.js).
+Copy configuration from [examples/config.js](https://github.com/enniel/adonis-geocoder/blob/master/examples/examples.js) to `config/geocoder.js`.
 
 ## Usage example
 
 ```js
-const res = yield Geocoder.geocode('29 champs elysée paris')
+const res = await Geocoder.geocode('29 champs elysée paris')
 
 // output :
-[{
-  latitude: 48.8698679,
-  longitude: 2.3072976,
-  country: 'France',
-  countryCode: 'FR',
-  city: 'Paris',
-  zipcode: '75008',
-  streetName: 'Champs-Élysées',
-  streetNumber: '29',
-  administrativeLevels: {
-    level1long: 'Île-de-France',
-    level1short: 'IDF',
-    level2long: 'Paris',
-    level2short: '75'
-  },
-  provider: 'google'
-}]
+[ { formattedAddress: '29 Av. des Champs-Élysées, 75008 Paris, France',
+    latitude: 48.869384,
+    longitude: 2.3071868,
+    extra:
+     { googlePlaceId: 'ChIJ4e9zicRv5kcRi_EQo6FKduM',
+       confidence: 1,
+       premise: null,
+       subpremise: null,
+       neighborhood: 'Paris',
+       establishment: null },
+    administrativeLevels:
+     { level2long: 'Paris',
+       level2short: 'Paris',
+       level1long: 'Île-de-France',
+       level1short: 'Île-de-France' },
+    streetNumber: '29',
+    streetName: 'Avenue des Champs-Élysées',
+    city: 'Paris',
+    country: 'France',
+    countryCode: 'FR',
+    zipcode: '75008',
+    provider: 'google' } ]
 ```
 
 For more information see [node-geocoder](https://github.com/nchaulet/node-geocoder).

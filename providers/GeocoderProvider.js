@@ -6,15 +6,16 @@
  * MIT Licensed
  */
 
-const ServiceProvider = require('adonis-fold').ServiceProvider
+const { ServiceProvider } = require('@adonisjs/fold')
 
 class GeocoderProvider extends ServiceProvider {
-  * register () {
+  register () {
     this.app.bind('Adonis/Addons/Geocoder', function (app) {
       const Config = app.use('Adonis/Src/Config')
       const Geocoder = require('../src/Geocoder')
       return new Geocoder(Config.get('geocoder'))
     })
+    this.app.alias('Adonis/Addons/Geocoder', 'Geocoder')
   }
 }
 
